@@ -5,8 +5,12 @@ In this section, we will take a look at TLS Basics
 
 ## Certificate
 - A certificate is used to guarantee trust between 2 parties during a transaction.
-- Example: when a user tries to access web server, tls certificates ensure that the communication between them is encrypted.
+For example: when a user tries to access the web server, TLS certificates ensure that the communication between them is encrypted.
 
+So you must encrypt your data using an encryption key. the data is encrypted using a key which is basically a set of random numbers and alphabets. 
+You add the random number into the data and encrypt it into a format that cannot recognized 
+ and then sent it to the server.
+ The hacker sniffing the network gets the data but cannot do anything with it. However same is the case with the server receiving the data it can not decrypt the  data without a key. So the copy of the key must be sent to the server
   ![cert1](../../images/cert1.PNG)
   
   
