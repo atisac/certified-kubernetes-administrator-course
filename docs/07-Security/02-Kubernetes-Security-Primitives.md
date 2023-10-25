@@ -6,12 +6,13 @@ In this section, we will take a look at Kubernetes security primitives
 ## Secure Hosts
 
  ![sech](../../images/sech.PNG)
+  
   Root access disabled.
-  Password-based authentication disabled.
+  Password-based authentication should be disabled.
   
 ## Secure Kubernetes
 - We need to make two types of decisions.
-  - Who can access?
+  - Who can access it?
   - What can they do?
  
   ![seck](../../images/seck.PNG)
