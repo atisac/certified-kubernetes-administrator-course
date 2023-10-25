@@ -1,24 +1,36 @@
 # Authentication
   - Take me to [Video Tutorial](https://kodekloud.com/topic/authentication/)
   
-In this section, we will take a look at authentication in a kubernetes cluster
+In this section, we will take a look at authentication in a Kubernetes cluster.
+Different kinds of users
+=========================
+Administrators - access the cluster to perform administrative tasks
+Developers - access the cluster to test or deploy application
+End user - access the application deployed on cluster
+Third-party applications - accessing the application for integration purposes.
 
 ## Accounts
 
   ![auth1](../../images/auth1.PNG)
+
+  How to secure the cluster by securing communication between internal components and securing management access to cluster through authentication and authorization mechanism
   
-#### Different users that may be accessing the cluster security of end users who access the applications deployed on the cluster is managed by the applications themselves internally.
+#### Different users that may be accessing the cluster. Security of end users who access the applications deployed on the cluster is managed by the applications themselves internally.
 
  ![acc1](../../images/acc1.PNG)
  
 - So, we left with 2 types of users
   - Humans, such as the Administrators and Developers
   - Robots such as other processes/services or applications that require access to the cluster.
+
+Kubernetes does not manage user accounts natively. it relies on an external source like a file with user details or certificates or 3rd 
+party service like LDAP  to manage these users. So in K8s you cannot create and list users.
+But K8s can manage service account
   
 
   ![acc2](../../images/acc2.PNG)
   
-- All user access is managed by apiserver and all of the requests goes through apiserver.
+- All user access is managed by Apiserver and all of the requests go through Apiserver. The Kubeapi server authenticates it before processing it.
  
   ![acc3](../../images/acc3.PNG)
   
