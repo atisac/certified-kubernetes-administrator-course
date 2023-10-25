@@ -23,8 +23,9 @@ In this section, we will take a look at **Container Storage Interface**
 ## Container Storage Interface
 
 - The container storage interface was developed to support multiple storage solutions. With CSI, you can now write your own drivers for your own storage to work with Kubernetes. Portworx, Amazon EBS, Azure Disk, GlusterFS etc.
-- CSI is not a Kubernetes specific standard. It is meant to be a universal standard and if implemented, allows any container orchestration tool to work with any storage vendor with a supported plugin. Kubernetes, Cloud Foundry and Mesos are onboard with CSI.
+- CSI is not a Kubernetes-specific standard. It is meant to be a universal standard and if implemented, allows any container orchestration tool to work with any storage vendor with a supported plugin. Kubernetes, Cloud Foundry, and Mesos are onboard with CSI.
 - It defines a set of RPCs or remote procedure calls that will be called by the container orchestrator. These must be implemented by the storage drivers.
+- for example, CSI says that when a pod is created it requires a volume, the container orchestrator in this case kubernetes, should call the create volume RPC and pass a set of details such as volume name. The storage driver should implement this RPC and handle that request and provision the volume in the storage array  and  return the result of the operation
 
 ![class-13](../../images/class13.PNG)
 
