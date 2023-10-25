@@ -6,8 +6,8 @@ In this section, we will take a look at **Container Storage Interface**
 
 ## Container Runtime Interface
 
-- Kubernetes used Docker alone as the container runtime engine, and all the code to work with Docker was embedded within the Kubernetes source code. Other container runtimes, such as rkt and CRI-O.
-- The Container Runtime Interface is a standard that defines how an orchestration solution like Kubernetes would communicate with container runtimes like Docker. If any new container runtime interace is developed, they can simply follow the CRI standards.
+- Kubernetes used Docker alone as the container runtime engine, and all the code to work with Docker was embedded within the Kubernetes source code. With other container runtimes coming in, such as rkt and CRI-O, it was important to open up and extend support to work with different container runtimes and not depend on the Kubernetes source code.
+- The Container Runtime Interface is a standard that defines how an orchestration solution like Kubernetes would communicate with container runtimes like Docker. If any new container runtime interface is developed, they can simply follow the CRI standards.
 
 ![class-11](../../images/class11.PNG)
 
