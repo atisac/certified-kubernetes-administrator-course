@@ -1,11 +1,13 @@
 # Kubernetes Security Primitives
   - Take me to [Video Tutorial](https://kodekloud.com/topic/kubernetes-security-primitives/)
   
-In this section, we will take a look at kubernetes security primitives
+In this section, we will take a look at Kubernetes security primitives
 
 ## Secure Hosts
 
  ![sech](../../images/sech.PNG)
+  Root access disabled.
+  Password-based authentication disabled.
   
 ## Secure Kubernetes
 - We need to make two types of decisions.
